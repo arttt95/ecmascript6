@@ -7,18 +7,18 @@ let Carro = function () {
 
     this.acelerar = function () {
 
-        velocidade = this.getvelocidadeAtual
-        this.setvelocidadeAtual(velocidade)
+        let velocidade = this.getVelocidadeAtual() + 10
+        this.setVelocidadeAtual(velocidade)
 
     }
 
-    this.getvelocidadeAtual = function () {
+    this.getVelocidadeAtual = function () {
 
         return this.velocidadeAtual
 
     }
 
-    this.setvelocidadeAtual = function (velocidadeAtual) {
+    this.setVelocidadeAtual = function (velocidadeAtual) {
 
         this.velocidadeAtual = velocidadeAtual
 
@@ -28,5 +28,12 @@ let Carro = function () {
 
 let carro = new Carro()
 
-carro.getvelocidadeAtual()
+console.log(`A velocidade atula do carro é: ${carro.getVelocidadeAtual()}`)
 
+carro.acelerar()
+
+console.log(`A velocidade atula do carro é: ${carro.getVelocidadeAtual()}`)
+
+carro.acelerar()
+
+console.log(`A velocidade atula do carro é: ${carro.getVelocidadeAtual()}`)
